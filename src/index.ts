@@ -5,4 +5,3 @@ export const best = Topsis.best.bind(Topsis);
 export { Topsis, CriteriaAttribute };
 
 export default Topsis;
-module.exports = Topsis;
