@@ -159,9 +159,7 @@ class Topsis {
 
     // Sorting alternatives by largest it's preference value
 
-    const rankedAlternatives = indexedPreferenceValues
-      .sort(([, a], [, b]) => b - a)
-      .map(([index]) => index);
+    const rankedAlternatives = indexedPreferenceValues.sort(([, a], [, b]) => b - a);
 
     return rankedAlternatives;
   }

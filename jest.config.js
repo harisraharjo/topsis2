@@ -7,4 +7,12 @@ module.exports = {
   verbose: true,
   automock: false,
   testRegex: './src/.*.test.ts$',
+  transform: {
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      {
+        diagnostics: false,
+      },
+    ],
+  },
 };

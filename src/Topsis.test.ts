@@ -34,7 +34,7 @@ describe('Topsis', () => {
   });
 
   test('should rank alternatives correctly', () => {
-    const ranked = Topsis.rank(criteria, matrix, true);
+    const ranked = Topsis.rank(criteria, matrix, true).map(([i]) => i);
     expect(ranked).toEqual([0, 2, 3, 1]);
   });
 
@@ -43,6 +43,6 @@ describe('Topsis', () => {
   });
 
   test('should return the index of the best alternative', () => {
-    expect(Topsis.best(criteria, matrix)).toBe(0);
+    expect(Topsis.best(criteria, matrix)[0]).toBe(0);
   });
 });
